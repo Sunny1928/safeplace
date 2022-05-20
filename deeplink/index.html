@@ -1,10 +1,10 @@
 <html>
     <script>
         var currentUrl = window.location.href
-        //https://sunny1928.github.io/safeplace
+        var staticUrl = "https://sunny1928.github.io/safeplace/deeplink/index.html"
         //37
-        console.log(currentUrl.substr(37))
+        console.log(currentUrl.substr(staticUrl.length))
         //app://safeplace/
-        window.location.href = "app://safeplace" + currentUrl.substr(15);
+        window.location.href = "app://safeplace/" + currentUrl.substr(staticUrl.length);
     </script>
 </html>
