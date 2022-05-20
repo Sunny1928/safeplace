@@ -1,9 +1,23 @@
 <html>
+    <body>
+        <div id="marker"></div>
+    </body>
     <script>
         var currentUrl = window.location.href
         var staticUrl = "https://sunny1928.github.io/safeplace/deeplink/index.html"
         console.log(currentUrl.substr(staticUrl.length))
         //app://safeplace/
-        window.location.href = "app://deeplink/" + currentUrl.substr(staticUrl.length);
+        
+        var ifrm = document.createElement('iframe');
+        ifrm.setAttribute('id', 'ifrm'); // assign an id
+
+        //document.body.appendChild(ifrm); // to place at end of document
+
+        // to place before another page element
+        var el = document.getElementById('marker');
+        el.parentNode.insertBefore(ifrm, el);
+
+        // assign url
+        ifrm.setAttribute('src', "app://deeplink/" + currentUrl.substr(staticUrl.length));
     </script>
 </html>
