@@ -1,0 +1,10 @@
+<html>
+    <script>
+        var currentUrl = window.location.href
+        //https://sunny1928.github.io/safeplace
+        //37
+        console.log(currentUrl.substr(37))
+        //app://safeplace/
+        window.location.href = "app://safeplace" + currentUrl.substr(15);
+    </script>
+</html>
