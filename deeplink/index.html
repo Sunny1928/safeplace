@@ -2,7 +2,6 @@
     <script>
         var currentUrl = window.location.href
         var staticUrl = "https://sunny1928.github.io/safeplace/deeplink/index.html"
-        //37
         console.log(currentUrl.substr(staticUrl.length))
         //app://safeplace/
         window.location.href = "app://safeplace/" + currentUrl.substr(staticUrl.length);
